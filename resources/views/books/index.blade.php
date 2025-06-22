@@ -40,31 +40,32 @@
     @endif
 
 
-    <ul class="py-2">
+    <ul class="py-2 mt-2">
         @forelse ($books as $book)
             <li>
-                <a href="{{ route('books.show', $book) }}"
-                    class="mb-4 bg-white border-1 border-gray-100 rounded-md py-4 px-5 block transition-all duration-300 ease-in-out hover:border-indigo-600 group">
-                    <div class="flex flex-wrap gap-4 items-center justify-between">
-                        <div class="w-full flex-grow sm:w-auto flex flex-col">
-                            <span
-                                class="font-medium text-gray-700 transition-all duration-300 ease-in-out group-hover:text-indigo-600">{{ $book->title }}</span>
-                            <span
-                                class="text-gray-600 text-sm mt-1 transition-all duration-300 ease-in-out group-hover:text-indigo-600">by
-                                {{ $book->author }}</span>
-                        </div>
-                        <div class="flex flex-col w-[140px]">
-                            <p
-                                class="font-medium text-gray-700 text-md transition-all duration-300 ease-in-out group-hover:text-indigo-600">
-                                {{ number_format($book->reviews_avg_rating, 1) }}
-                            </p>
-                            <div
-                                class="text-gray-700 text-sm transition-all duration-300 ease-in-out group-hover:text-indigo-600">
-                                out of {{ $book->reviews_count }} {{ Str::plural('review', $book->reviews_count) }}
+                <x-card class="transition-all duration-300 ease-in-out hover:border-indigo-600 group">
+                    <a href="{{ route('books.show', $book) }}">
+                        <div class="flex flex-wrap gap-4 items-center justify-between">
+                            <div class="w-full flex-grow sm:w-auto flex flex-col">
+                                <span
+                                    class="font-medium text-gray-700 transition-all duration-300 ease-in-out group-hover:text-indigo-600">{{ $book->title }}</span>
+                                <span
+                                    class="text-gray-600 text-sm mt-1 transition-all duration-300 ease-in-out group-hover:text-indigo-600">by
+                                    {{ $book->author }}</span>
+                            </div>
+                            <div class="flex flex-col w-[140px]">
+                                <p
+                                    class="font-medium text-gray-700 text-md transition-all duration-300 ease-in-out group-hover:text-indigo-600">
+                                    {{ number_format($book->reviews_avg_rating, 1) }}
+                                </p>
+                                <div
+                                    class="text-gray-700 text-sm transition-all duration-300 ease-in-out group-hover:text-indigo-600">
+                                    out of {{ $book->reviews_count }} {{ Str::plural('review', $book->reviews_count) }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </x-card>
             </li>
         @empty
             <li class="mb-4">

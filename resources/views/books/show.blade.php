@@ -23,7 +23,7 @@
         <ul>
             @forelse ($book->reviews as $review)
                 <li class="mb-4">
-                    <div class="mb-4 bg-white border-1 border-gray-100 rounded-md py-4 px-5 flex items-center gap-5">
+                    <x-card class="flex items-center gap-5">
                         <h2
                             class="text-md text-gray-500 text-xl bg-gray-100 w-[60px] h-[60px] flex items-center justify-center rounded-full">
                             {{ number_format($review->rating, 1) }}</h2>
@@ -33,7 +33,7 @@
                                 {{ $review->created_at->format('M j, Y') }}
                             </time>
                         </div>
-                    </div>
+                    </x-card>
                 </li>
             @empty
                 <li class="mb-4">
