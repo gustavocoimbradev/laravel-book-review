@@ -3,6 +3,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "publish": "git add . && git pull && git commit -m 'book-review' && git push",
         "build": "vite build",
         "dev": "vite"
     },
