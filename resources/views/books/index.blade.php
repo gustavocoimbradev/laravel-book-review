@@ -10,9 +10,7 @@
             class="placeholder:text-gray-400 flex-1 py-3 px-5 bg-white border-1 rounded-s-md border-gray-100 focus:border-indigo-600 focus:text-indigo-600 transition-all ease-in-out duration-300 focus:placeholder-indigo-600 placeholder:transition-all placeholder:duration-300 placeholder:ease-in-out"
             value="{{ request('title') }}" type="text" name="title" placeholder="Search by title" />
         <input type="hidden" name="filter" value="{{ request('filter') }}">
-        <button
-            class="min-w-[130px] bg-gray-600 group-focus-within:bg-indigo-600  text-white cursor-pointer transition-all ease-in-out duration-300  "
-            type="submit">Search</button>
+        <x-button class="group-focus-within:bg-indigo-600">Search</x-button>
     </form>
 
     <div class="bg-white flex flex-wrap gap-5 px-5 border-1 border-gray-100 rounded-md">
@@ -75,5 +73,7 @@
             </li>
         @endforelse
     </ul>
+
+
 
 @endsection

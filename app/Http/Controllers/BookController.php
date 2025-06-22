@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -38,11 +39,16 @@ class BookController extends Controller
         $cacheKey = "book:$book->id";
 
         $book = cache()->remember($cacheKey, 3600, function () use ($book) {
-            return $book->loadAvg('reviews', 'rating')
-                        ->loadCount('reviews');
+            return $book->load([
+                'reviews' => function ($query) {
+                    $query->orderBy('created_at', 'desc');
+                }
+            ])->loadAvg('reviews', 'rating')
+              ->loadCount('reviews');
         });
 
         return view('books.show', compact('book'));
     }
+
     
 }
