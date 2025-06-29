@@ -24,7 +24,7 @@ This is a simple book review platform built with Laravel. Created for portfolio 
 
 #### Factories
 
-- [database/factories/BookFactory.php](database/factories/BookFactory.php) – Generates fake book data for testing/seeding  
+- [database/factories/BookFactory.php](database/factories/BookFactory.php) – Generates fake book data  
 - [database/factories/ReviewFactory.php](database/factories/ReviewFactory.php) – Generates fake review data  
 - [database/factories/UserFactory.php](database/factories/UserFactory.php) – Generates fake user accounts  
 
