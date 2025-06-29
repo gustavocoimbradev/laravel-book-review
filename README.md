@@ -22,10 +22,6 @@ This is a simple book review platform built with Laravel. Created for portfolio 
 
 - [routes/web.php](routes/web.php) - Application route definitions
 
-#### Middlewares
-
-- [app/Http/Middleware/AuthMiddleware.php](app/Http/Middleware/AuthMiddleware.php) - Authentication middleware  
-
 #### Models
 
 - [app/Models/Book.php](app/Models/Book.php) - Book model
