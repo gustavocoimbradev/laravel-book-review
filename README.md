@@ -22,6 +22,22 @@ This is a simple book review platform built with Laravel. Created for portfolio 
 
 - [routes/web.php](routes/web.php) - Application route definitions
 
+#### Factories
+
+- [database/factories/BookFactory.php](database/factories/BookFactory.php) – Generates fake book data for testing/seeding  
+- [database/factories/ReviewFactory.php](database/factories/ReviewFactory.php) – Generates fake review data  
+- [database/factories/UserFactory.php](database/factories/UserFactory.php) – Generates fake user accounts  
+
+#### Seeders
+
+- [database/seeders/DatabaseSeeder.php](database/seeders/DatabaseSeeder.php) – Calls all individual seeders to populate the database  
+
+#### Migrations
+
+- [database/migrations/0001_01_01_000000_create_users_table.php](database/migrations/0001_01_01_000000_create_users_table.php) – Creates the `users` table  
+- [database/migrations/2025_06_21_152824_create_books_table.php](database/migrations/2025_06_21_152824_create_books_table.php) – Creates the `books` table  
+- [database/migrations/2025_06_21_162557_create_reviews_table.php](database/migrations/2025_06_21_162557_create_reviews_table.php) – Creates the `reviews` table  
+
 #### Models
 
 - [app/Models/Book.php](app/Models/Book.php) - Book model
