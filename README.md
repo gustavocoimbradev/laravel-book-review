@@ -16,7 +16,7 @@ This is a simple book review platform built with Laravel. Created for portfolio 
 - Tailwind CSS  
 - SQLite  
 
-## Main Files
+## Main files
 
 #### Routes
 
